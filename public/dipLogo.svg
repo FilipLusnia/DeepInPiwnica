@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="182.26483mm"
+   height="28.33868mm"
+   viewBox="0 0 182.26483 28.33868"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="dipLogo.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="20.410713"
+       y="84.666664"
+       width="174.625"
+       height="87.690475"
+       id="rect12" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="346.15485"
+     inkscape:cy="198.44867"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1850"
+     inkscape:window-height="1030"
+     inkscape:window-x="52"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-13.764545,-98.724264)">
+    <text
+       xml:space="preserve"
+       id="text10"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Road Rage';-inkscape-font-specification:'Road Rage';white-space:pre;shape-inside:url(#rect12);fill:#000000;fill-opacity:1;stroke:none;" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:25.4px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:117.914;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="49.979401"
+       y="110.78322"
+       id="text18"
+       transform="matrix(1.4987884,0,0,1.7067097,-53.150245,-69.511541)"><tspan
+         x="49.979401"
+         y="110.78322"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.732px;font-family:'Road Rage';-inkscape-font-specification:'Road Rage';stroke-width:0.264583">DEEP IN PIWNICA</tspan></tspan></text>
+  </g>
+</svg>
