@@ -1,0 +1,22 @@
+.header_container{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header_logo{
+        height: 40px;
+        width: auto;
+        fill: $textColor;
+    }
+    
+    .header_nav{
+    
+    }
+    
+    .header_nav_link{
+        font-size: 20px;
+        color: $primaryColor;
+        padding: 0 35px;
+    }
+}

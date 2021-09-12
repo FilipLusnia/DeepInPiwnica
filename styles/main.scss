@@ -1,3 +1,23 @@
+@import './reset-css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+
+$backgroundColor: #ffffff;
+$primaryColor: #fd004c;
+$textColor: #080808;
+
+@import './Header/Header';
+
 body {
-    background-color: red;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: #ffffff;
+}
+
+a{
+    text-decoration: none;
+    transition: 0.2s;
+
+    &:hover{
+        opacity: 0.2;
+    }
 }
