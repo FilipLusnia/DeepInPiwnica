@@ -1,15 +1,23 @@
 @import './reset-css';
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+@font-face {
+    font-family: 'Road Rage';
+    src: url(../public/Road_Rage.otf) format('opentype');
+}
 
-$backgroundColor: #ffffff;
-$primaryColor: #fd004c;
-$textColor: #080808;
+$backgroundColor: #080808;
+$primaryColor: #ff2365;
+$textColor: #ffffff;
 
-@import './Header/Header';
+@import './components/Header/Header';
+@import './components/LoadingCover';
+@import './pages/Home';
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff;
+    background-color: $backgroundColor;
+    color: $textColor;
 }
 
 a{

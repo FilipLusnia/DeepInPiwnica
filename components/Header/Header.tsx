@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import LogoIcon from '../../public/dipLogo.svg';
 
 const Header = () => {
   return (
     <div className='header_container'>
-        <LogoIcon className='header_logo'/>
+        <div className='header_logo_wrapper'>
+            <h1 className='header_logo' data-text='DEEP IN PIWNICA'>DEEP IN PIWNICA</h1>
+        </div>
 
         <nav className='header_nav'>
             <Link href='/playlisty'>
@@ -13,13 +14,13 @@ const Header = () => {
                 </a>
             </Link>
 
-            <Link href=''>
+            <Link href='/'>
                 <a className='header_nav_link'>
                     Live
                 </a>
             </Link>
             
-            <Link href=''>
+            <Link href='/'>
                 <a className='header_nav_link'>
                     Tablica
                 </a>
