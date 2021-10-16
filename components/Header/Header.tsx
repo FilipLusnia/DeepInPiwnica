@@ -20,12 +20,6 @@ const Header = () => {
                 </a>
             </Link>
             
-            <Link href='/'>
-                <a className='header_nav_link'>
-                    Tablica
-                </a>
-            </Link>
-            
             <Link href='/opcje'>
                 <a className='header_nav_link'>
                     Opcje

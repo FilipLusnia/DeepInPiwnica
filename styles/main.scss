@@ -9,18 +9,37 @@
 $backgroundColor: #080808;
 $primaryColor: #ff2365;
 $textColor: #ffffff;
+$borderRadius: 15px;
 
 @import './components/Header/Header';
 @import './components/LoadingCover';
 @import './pages/Home';
 
+html{
+    background-color: $backgroundColor;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: $backgroundColor;
     color: $textColor;
+    animation: revealPageBody 0.3s;
+
+    @keyframes revealPageBody {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
 }
 
-a{
+button{
+    width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+
+a, button{
     text-decoration: none;
     transition: 0.2s;
 
