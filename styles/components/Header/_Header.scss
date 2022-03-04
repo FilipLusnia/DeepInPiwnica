@@ -21,6 +21,26 @@
             99% { transform: translateX(-3px); }
             100% { transform: translateX(0px); }
         }
+
+		.header_quote{
+			position: absolute;
+			white-space: nowrap;
+			letter-spacing: 0.5px;
+			top: 3vw;
+			left: 10vw;
+			font-size: 0.7vw;
+			transform: skew(-0.08turn, 2deg);
+			text-shadow: 0 0px 10px rgba(0, 0, 0, 1);
+            animation: switchQuoteColor 1.5s infinite linear;
+
+			@keyframes switchQuoteColor {
+				0% { color: $textColor; }
+				25% { color: #ff0037; }
+				50% { color: #00e457; }
+				75% { color: #3a37ff; }
+				100% { color: $textColor; }
+			}
+		}
     }
 
     .header_logo{

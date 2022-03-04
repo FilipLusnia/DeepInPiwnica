@@ -11,13 +11,13 @@
     z-index: 999;
     
     &_plate{
-        background-color: $primaryColor;
         height: 100%;
         width: 100%;
         position: absolute;
         opacity: 0;
 
         &.-left{
+			background: linear-gradient(45deg, rgb(207, 0, 24) 0%, $primaryColor 100%);
             clip-path: polygon(0 0, 0 100%, 100% 100%);
             transform: translateY(110%);
             animation: pushLeftPlate 1.5s cubic-bezier(.33,.09,0,.9);
@@ -31,6 +31,7 @@
         
 
         &.-right{
+			background: linear-gradient(135deg, $primaryColor 0%, rgb(207, 0, 24) 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%);
             transform: translateY(-110%);
             animation: pushRightPlate 1.5s cubic-bezier(.33,.09,0,.9);

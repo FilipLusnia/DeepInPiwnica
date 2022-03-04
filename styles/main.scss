@@ -7,7 +7,7 @@
 }
 
 $backgroundColor: #080808;
-$primaryColor: #ff2353;
+$primaryColor: #ff2340;
 $textColor: #ffffff;
 $borderRadius: 15px;
 
@@ -29,6 +29,23 @@ body {
         0% { opacity: 0; }
         100% { opacity: 1; }
     }
+
+	.app_background_wrapper{
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+
+		.app_background{
+			min-width: 100%;
+			min-height: 100%;
+			object-fit: cover;
+			opacity: 0.5;
+			transition: 1s;
+		}
+	}
 }
 
 button{
@@ -44,6 +61,6 @@ a, button{
     transition: 0.2s;
 
     &:hover{
-        opacity: 0.2;
+        opacity: 0.3;
     }
 }

@@ -11,8 +11,8 @@ const Home = () => {
 		"( ͡° ͜ʖ ͡°)",
 		"༼ ͡• ͜໒ ͡• ༽",
 		"(͡o‿O͡)",
-		"ಠ╭╮ಠ",
-		"(ʘᗩʘ')"
+		"(⌐■_■)ﾉ",
+		"('ʘᗩʘ)"
 	];
 
 	const getPosts = async () => {
@@ -54,7 +54,6 @@ const Home = () => {
 		}
 
 		<div className='home_container'>
-			<video src='/background.mp4' className='home_background' autoPlay muted loop/>
 			<div className='home_hero'>
 				<div className='home_hero_left'>
 					<div className={releaseAnimations ? 'home_hero_title -revealed' : 'home_hero_title'}>
