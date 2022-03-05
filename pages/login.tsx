@@ -12,7 +12,8 @@ const Login = () => {
 	});
 	const [ blockInterface, setBlockInterface ] = useState(false);
 
-	const loginUser = () => {
+	const loginUser = (e: any) => {
+		e.preventDefault();
 		setBlockInterface(true);
 		signInWithEmailAndPassword(auth, userData.email, userData.pass)
 		.then(() => {
@@ -33,7 +34,7 @@ const Login = () => {
 					<h1>Pucuj się z danych osobowych</h1>
 					<input type='email' value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} disabled={blockInterface} placeholder='Email'/>
 					<input type='password' value={userData.pass} onChange={e => setUserData({...userData, pass: e.target.value})} disabled={blockInterface} placeholder='Hasło'/>
-					<button onClick={() => loginUser()} disabled={blockInterface}>Zaloguj</button>
+					<button type='submit' onClick={e => loginUser(e)} disabled={blockInterface}>Zaloguj</button>
 				</form>
 			</div>
 		</>
