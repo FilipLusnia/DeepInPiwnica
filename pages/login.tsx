@@ -32,7 +32,7 @@ const Login = () => {
 				<form className='login_window'>
 					<h1>Pucuj się z danych osobowych</h1>
 					<input value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} disabled={blockInterface} placeholder='Email'/>
-					<input value={userData.pass} onChange={e => setUserData({...userData, pass: e.target.value})} disabled={blockInterface} placeholder='Hasło'/>
+					<input type='password' value={userData.pass} onChange={e => setUserData({...userData, pass: e.target.value})} disabled={blockInterface} placeholder='Hasło'/>
 					<button onClick={() => loginUser()} disabled={blockInterface}>Zaloguj</button>
 				</form>
 			</div>
