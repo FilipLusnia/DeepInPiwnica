@@ -24,11 +24,10 @@
             @keyframes pushLeftPlate {
                 0% { transform: translateY(0%); opacity: 1; }
                 20% { transform: translateY(0%); opacity: 1; }
-                30% { opacity: 1; }
+                60% { opacity: 1; }
                 100% { transform: translateY(100%); opacity: 0; }
             }
         }
-        
 
         &.-right{
 			background: linear-gradient(135deg, $primaryColor 0%, rgb(207, 0, 24) 100%);
@@ -38,7 +37,7 @@
             @keyframes pushRightPlate {
                 0% { transform: translateY(0%); opacity: 1; }
                 20% { transform: translateY(0%); opacity: 1; }
-                30% { opacity: 1; }
+                60% { opacity: 1; }
                 100% { transform: translateY(-100%); opacity: 0; }
             }
         }

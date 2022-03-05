@@ -93,7 +93,7 @@
             }
         }
         @keyframes glitch-skew {
-            $steps: 10;
+            $steps: 15;
             @for $i from 0 through $steps {
                 #{percentage($i*(math.div(1, $steps)))} {
                     transform: skew((random(20) - 15) + deg);
@@ -103,13 +103,21 @@
     }
     
     .header_nav{
-    
+		display: flex;
+		align-items: center;
     }
     
     .header_nav_link{
         font-size: 18px;
         font-weight: 600;
-        color: $primaryColor;
+        color: $textColor;
         padding: 0 25px;
+		text-shadow: 0 0 10px $primaryColor;
+
+		&_icon{
+			height: 25px;
+			width: 25px;
+			fill: $textColor;
+		}
     }
 }

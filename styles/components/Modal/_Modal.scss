@@ -1,0 +1,28 @@
+.modal_background{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000c9;
+    top: 0;
+    left: 0;
+    z-index: 51;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: revealPostModal 0.5s;
+
+    @keyframes revealPostModal {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    .modal_container{
+        height: auto;
+        width: 50vw;
+        background-color: #ffffff;
+        border-radius: $borderRadius;
+        box-sizing: border-box;
+        padding: 30px;
+        overflow: hidden;
+	}
+}

@@ -1,11 +1,16 @@
-import { createContext } from "react";
-import { initializeApp } from "firebase/app"
-import { getFirestore } from "firebase/firestore"
-import { getStorage } from "firebase/storage"
+import { useRouter } from "next/router";
+import { useState, useEffect, createContext } from "react";
+import { initializeApp, getApp } from "firebase/app";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 export const FirebaseContext = createContext<any>(null);
 
 export const FirebaseProvider = ({children}: any) => {
+	const router = useRouter();
+	const [ fallback, setFallback ] = useState(true);
+	const [ isUserAuth, setIsUserAuth ] = useState(false);
 
     const firebaseConfig = {
         apiKey: "AIzaSyDcssRfPB3FPMAK1noSLPrtzx-WKlCSAWo",
@@ -17,12 +22,34 @@ export const FirebaseProvider = ({children}: any) => {
         measurementId: "G-TJDMVWE33H"
     };
     initializeApp(firebaseConfig);
+	
+    const app = getApp();
+    const auth = getAuth();
     const firestore = getFirestore();
     const storage = getStorage();
 
+	useEffect(() => {
+		if(app){
+			onAuthStateChanged(auth, user => {
+				if(user){
+					router.push("/")
+					setIsUserAuth(true)	
+				} else {
+					router.push("/login")
+					setIsUserAuth(false)	
+				}
+			})
+			setFallback(false);
+		}
+	}, [app, auth])
+	
     return(
-        <FirebaseContext.Provider value={{ firestore, storage }}>
-            {children}
+        <FirebaseContext.Provider value={{ app, auth, isUserAuth, firestore, storage }}>
+			{fallback ?
+				<div className='app_fallback'/>
+			:
+				children
+			}
         </FirebaseContext.Provider>
     )
 }

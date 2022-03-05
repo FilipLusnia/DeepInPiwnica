@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from 'react';
 import { doc, onSnapshot, limit, orderBy, collection, getDocs } from 'firebase/firestore';
 import { FirebaseContext } from '../components/Firebase/firebase';
-import LoadingCover from '../components/LoadingCover';
+import Modal from '../components/Modal/Modal';
 
 const Home = () => {
-	const { firestore, storage } = useContext(FirebaseContext);
+	const { auth, firestore, storage } = useContext(FirebaseContext);
 	const [ releaseAnimations, setReleaseAnimations ] = useState(false);
 	const [ showPostModal, setShowPostModal ] = useState(false);
 	const lenny = [
@@ -16,41 +16,38 @@ const Home = () => {
 	];
 
 	const getPosts = async () => {
-		const posts = await getDocs(collection(firestore, "posts"));
-		posts.forEach((doc: any) => {
-			console.log(doc.id, " => ", doc.data());
-		});
+		if(auth.currentUser){
+			const posts = await getDocs(collection(firestore, "posts"));
+			posts.forEach((doc: any) => {
+				console.log(doc.id, " => ", doc.data());
+			});
+		}
 	}
 
 	useEffect(() => {
 		setTimeout(() => setReleaseAnimations(true), 1500);
-		
 		getPosts()
 	}, [])
 
 	return (
 	<>
-		{!releaseAnimations && <LoadingCover/>}
-
 		{showPostModal &&
-			<>
-				<div className='postModal_background'>
-					<div className='postModal_container'>
-						<h1>Napisz post:</h1>
-						<textarea placeholder='Czego?'/>
-						<div className='postModal_bottom'>
-							<div className='postModal_bottom_file'>
-								<p>Dodaj zdjęcie lub film:</p>
-								<input type='file'/>
-							</div>
-							<div className='postModal_bottom_buttons'>
-								<button onClick={() => setShowPostModal(false)}>Anuluj</button>
-								<button>Ok</button>
-							</div>
+			<Modal>
+				<div className='postModal'>
+					<h1>Napisz post:</h1>
+					<textarea placeholder='Czego?'/>
+					<div className='postModal_bottom'>
+						<div className='postModal_bottom_file'>
+							<p>Dodaj zdjęcie lub film:</p>
+							<input type='file'/>
+						</div>
+						<div className='postModal_bottom_buttons'>
+							<button onClick={() => setShowPostModal(false)}>Anuluj</button>
+							<button>Ok</button>
 						</div>
 					</div>
 				</div>
-			</>
+			</Modal>
 		}
 
 		<div className='home_container'>
