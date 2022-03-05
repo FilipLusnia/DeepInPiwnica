@@ -30,7 +30,9 @@ export const FirebaseProvider = ({children}: any) => {
 
 	useEffect(() => {
 		if(app){
-			onAuthStateChanged(auth, user => {
+			setFallback(false);
+			const unsub = onAuthStateChanged(auth, user => {
+				unsub();
 				if(user){
 					router.push("/")
 					setIsUserAuth(true)	
@@ -39,7 +41,6 @@ export const FirebaseProvider = ({children}: any) => {
 					setIsUserAuth(false)	
 				}
 			})
-			setFallback(false);
 		}
 	}, [app, auth])
 	

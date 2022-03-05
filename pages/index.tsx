@@ -1,10 +1,12 @@
+import { useRouter } from 'next/router';
 import { useState, useEffect, useContext } from 'react';
 import { doc, onSnapshot, limit, orderBy, collection, getDocs } from 'firebase/firestore';
 import { FirebaseContext } from '../components/Firebase/firebase';
 import Modal from '../components/Modal/Modal';
 
 const Home = () => {
-	const { auth, firestore, storage } = useContext(FirebaseContext);
+	const router = useRouter();
+	const { auth, isUserAuth, firestore, storage } = useContext(FirebaseContext);
 	const [ releaseAnimations, setReleaseAnimations ] = useState(false);
 	const [ showPostModal, setShowPostModal ] = useState(false);
 	const lenny = [
@@ -28,6 +30,10 @@ const Home = () => {
 		setTimeout(() => setReleaseAnimations(true), 1500);
 		getPosts()
 	}, [])
+
+	useEffect(() => {
+		!isUserAuth && router.push("/login")
+	}, [isUserAuth])
 
 	return (
 	<>

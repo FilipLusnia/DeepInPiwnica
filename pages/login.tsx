@@ -1,11 +1,12 @@
-import router from 'next/router';
-import { useState, useContext } from 'react';
+import { useRouter } from "next/router";
+import { useState, useEffect, useContext } from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { FirebaseContext } from '../components/Firebase/firebase';
 import Header from '../components/Header/Header';
 
 const Login = () => {
-	const { auth } = useContext(FirebaseContext);
+	const router = useRouter();
+	const { auth, isUserAuth } = useContext(FirebaseContext);
 	const [ userData, setUserData ] = useState({
 		email: '',
 		pass: ''
@@ -25,6 +26,10 @@ const Login = () => {
 			alert("Błędne dane logowania. Kod błędu: " + err.code);
 		});
 	}
+
+	useEffect(() => {
+		isUserAuth && router.push("/")
+	}, [isUserAuth])
 
 	return (
 		<>
