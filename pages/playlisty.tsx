@@ -7,7 +7,7 @@ const Playlists = () => {
 	const { isUserAuth } = useContext(FirebaseContext);
 
 	useEffect(() => {
-		!isUserAuth && router.push("/login")
+		(isUserAuth === false) && router.push("/login")
 	}, [isUserAuth])
 
 	return (

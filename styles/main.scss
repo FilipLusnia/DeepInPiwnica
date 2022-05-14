@@ -63,6 +63,14 @@ body {
 			100% { opacity: 0; }
 		}
 	}
+
+	.app_wrapper{
+		animation: revealApp 0.3s;
+		@keyframes revealApp {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
+		}
+	}
 }
 
 input{
@@ -81,11 +89,13 @@ input{
 }
 
 button{
-    width: 100px;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     font-weight: 600;
+	color: #ffffff;
+	background: $primaryColor;
+	border: none;
 
 	&:disabled{
 		opacity: 0.5;
@@ -99,5 +109,16 @@ a, button{
 
     &:hover{
         opacity: 0.3;
+    }
+
+    &:focus{
+		border: 2px solid $primaryColor;
+		border-radius: 10px;
+		animation: pulseFocus 0.5s infinite;
+		@keyframes pulseFocus {
+			0% { opacity: 1; }
+			50% { opacity: 0.5; }
+			100% { opacity: 1; }
+		}
     }
 }

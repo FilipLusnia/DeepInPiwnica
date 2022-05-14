@@ -4,7 +4,8 @@ const LoadingCover = () => {
 	const [ renderCover, setRenderCover ] = useState(true);
 
 	useEffect(() => {
-		setTimeout(() => setRenderCover(false), 1500);
+		const timeout = setTimeout(() => setRenderCover(false), 1500);
+		return () => clearTimeout(timeout)
 	}, [])
 
 	return (

@@ -3,7 +3,8 @@
 .header_container{
     position: fixed;
     width: 100%;
-    padding: 30px 60px;
+	height: 90px;
+    padding: 0 50px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -111,7 +112,7 @@
         font-size: 18px;
         font-weight: 600;
         color: $textColor;
-        padding: 0 25px;
+        padding: 5px 25px;
 		text-shadow: 0 0 10px $primaryColor;
 
 		&_icon{

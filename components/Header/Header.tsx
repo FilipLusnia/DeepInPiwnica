@@ -28,30 +28,30 @@ const Header = () => {
 			{isUserAuth &&
 				<nav className='header_nav'>
 					<Link href='/'>
-						<a className='header_nav_link'>
+						<a className='header_nav_link' onMouseDown={e => e.preventDefault()} >
 							Start
 						</a>
 					</Link>
 
 					<Link href='/playlisty'>
-						<a className='header_nav_link'>
+						<a className='header_nav_link' onMouseDown={e => e.preventDefault()} >
 							Playlisty
 						</a>
 					</Link>
 
 					<Link href='/live'>
-						<a className='header_nav_link'>
+						<a className='header_nav_link' onMouseDown={e => e.preventDefault()} >
 							Live
 						</a>
 					</Link>
 					
 					<Link href='/opcje'>
-						<a className='header_nav_link'>
+						<a className='header_nav_link' onMouseDown={e => e.preventDefault()} >
 							Opcje
 						</a>
 					</Link>
 					
-					<a className='header_nav_link' onClick={() => signOut(auth)}>
+					<a href='' className='header_nav_link' onClick={() => signOut(auth)} onMouseDown={e => e.preventDefault()} >
 						<LogoutIcon  className='header_nav_link_icon'/>
 					</a>
 				</nav>

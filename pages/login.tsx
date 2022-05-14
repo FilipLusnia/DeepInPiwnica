@@ -30,7 +30,7 @@ const Login = () => {
 	useEffect(() => {
 		isUserAuth && router.push("/")
 	}, [isUserAuth])
-
+	
 	return (
 		<>
 			<Header/>
